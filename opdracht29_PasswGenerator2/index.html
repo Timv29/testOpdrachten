@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d454fbf873.js" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h2 id="myHeader">Password generator</h2>
+    </header>
+    <div id="generator">
+        <div id="settings">
+            <h2>Settings</h2>
+            <label>
+                <input id="pwLength" type="number" min="1" max="128" value="16" title="pwLength">
+            </label>
+            <label for="lowerCase">
+                <input id="includeLowercase" type="checkbox" name="lowerCase" checked>
+                Include Lowercase
+            </label>
+            <label for="upperCase">
+                <input id="includeUppercase" type="checkbox" name="upperCase" checked>
+                Include Uppercase
+            </label>
+            <label for="numBers">
+                <input id="includeNumbers" type="checkbox" name="numBers" checked>
+                Include Numbers
+            </label>
+            <label for="symBols">
+                <input id="includeSymbols" type="checkbox" name="symBols" checked>
+                Include Symbols
+            </label>
+        </div>
+        <div id="result">
+            <h2>Generated password:</h2>
+            <button id="generate" type="button">New Password</button>
+            <div id="resultCopy">
+                <div id="pwResult">Your password will appear here</div>
+                <button type="button" id="copyPassword" title="copy password">
+                    <i class="fa-solid fa-copy"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

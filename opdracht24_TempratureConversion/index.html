@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <form action="" id="myForm">
+            <aside id="aside-li"></aside>
+            <fieldset id="input">
+                <legend>Input number</legend>
+                <div id="myh1">
+                    <h1>temperature conversion</h1>
+                </div>
+                <input type="number" id="textBox" placeholder="0" title="textbox">
+                <div id="clear">
+                    <button type="button" 
+                    onclick="clearInputField()">Click here to clear</button>
+                </div>
+            </fieldset>
+            <fieldset id="unit">
+                <legend>Choose unit degrees</legend>
+                <div id="toFahrenheit" >
+                    <input 
+                    id="toFahr"
+                    type="radio" name="unit" title="toFahrenheid">
+                    <label for="toFahrenheid">Celsius ➡️ Fahrenheit</label>
+                </div>
+                <div id="toCe;sius" >
+                    <input type="radio" id="toCels" name="unit" title="toCelcius">
+                    <label for="toCelsius">Fahrenheit ➡️ Celsius</label>
+                </div>
+            </fieldset>
+            <div id="submit">
+                <button type="button" onclick="convert()">submit</button>
+            </div>
+            <div id="paragraph">
+                <p id="result"></p>
+            </div>
+            <aside id="aside-re"></aside>
+        </form> 
+    </div>
+</body>
+</html>

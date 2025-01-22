@@ -1,0 +1,106 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 95%);
+}
+h1{
+    color: hsl(223, 100%, 64%);
+    word-wrap: break-word;
+}
+#container{
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.3);
+}
+form{
+    /* margin: auto; */
+    text-align: center;
+
+    display: grid;
+    grid-template-areas: 
+        "side-li input side-r"
+        "side-li unit side-r"
+        "side-li submit side-r"
+        "side-li p side-r"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 0.5fr 0.5fr;
+    gap: 10px;
+}
+/* grid wrappers within form*/
+#aside-li{
+    grid-area: side-li;
+    max-width: 20px;
+}
+#aside-re{
+    grid-area: side-r;
+    max-width: 20px;
+}
+#input{
+    grid-area: input;
+    display: flex;
+    flex-direction: column;
+}
+#unit{
+    grid-area: unit;
+    display: flex;
+    flex-direction: column;
+}
+#toFahrenheit{
+    flex-direction: row;
+}
+#toCelsius{
+    flex-direction: row;
+}
+/* submit/clear-button styling */
+#submit{
+    grid-area: submit;
+}
+button[type="button"]{
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for size */
+    font-size: 1.2em; /* Font size */
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s; /* Smooth transition */
+}
+
+button[type="button"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly grow on hover */
+}
+
+button[type="button"]:active {
+    background-color: #3e8e41; /* Even darker green when clicked */
+    transform: scale(0.98); /* Slightly shrink on click */
+}
+/* end submit-button styling */
+
+#paragraph{
+    grid-area: p;
+    background-color: rgb(10, 131, 93);
+    margin-bottom: 20px;
+    color:white;
+    border-radius: 5px;
+}
+
+/* textbox en input area */
+#textBox{
+    /* display: flex;
+    flex-wrap: wrap; */
+    text-align: center;
+    font-size: 2em;
+    border: 2px solid hsla(0, 0%, 0%, 0.8);
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+#result{
+    font-size: 1.75em;
+    font-weight: bold;
+}
