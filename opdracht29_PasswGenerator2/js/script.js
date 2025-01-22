@@ -3,7 +3,7 @@ const cl = console.log.bind(console);
 
 // define variables within a eventlisteners function
 // include the function to generate a random password based on the given chars
-document.querySelector("#generate").addEventListener("click", () => {
+window.addEventListener("load", () => {
 
     // function to generate a random password based on the given chars
 
@@ -63,10 +63,19 @@ document.querySelector("#generate").addEventListener("click", () => {
     const symbol = document.querySelector("#includeSymbols").checked;
 
     // Handle the generate button click for regeneration
-    document.querySelector("#pwResult").innerHTML = generatePass(lower, upper, num, symbol, length);
+    document.querySelector("#generate").addEventListener("click", () => {
+        const length = document.querySelector("#pwLength").value;
+        const lower = document.querySelector("#includeLowercase").checked;
+        const upper = document.querySelector("#includeUppercase").checked;
+        const num = document.querySelector("#includeNumbers").checked;
+        const symbol = document.querySelector("#includeSymbols").checked;
+        document.querySelector("#pwResult").innerHTML = generatePass(lower, upper, num, symbol, length);
+    })
     
     // Generate initial password on load
+    document.querySelector("#pwResult").innerHTML = generatePass(lower, upper, num, symbol, length);
 })
+
 
 
 
